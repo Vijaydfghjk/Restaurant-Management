@@ -164,7 +164,110 @@ Endpoint: POST /users/login
 ]
 
 ```
+### Request for Create Invoive Post http://localhost:8000/invoices
+
+``` json
+
+    {
+ 
+  "order_id": "67b7d75e1c0f9ece68877066",
+  "payment_method": "CARD",
+  "payment_status": "PAID"
+  }
+  ### Response
+
+  {
+    "InsertedID": "67b7e1921c0f9ece6887706a"
+  }
+
+```
+
+### Request for Fetching the Details about invoice GET http://localhost:8000/invoices/67b7e1921c0f9ece6887706a
+``` json
+{
+    "Invoice_id": "67b7e1921c0f9ece6887706a",
+    "Payment_method": "CARD",
+    "Order_id": "67b7d75e1c0f9ece68877066",
+    "Payment_status": "PENDING",
+    "Payment_due": 100,
+    "Table_number": "T2",
+    "Payment_due_date": "0001-01-01T00:00:00Z",
+    "Order_details": [
+        [
+            {
+                "Unit_price": 10,
+                "food_image": "https://www.eatingwell.com/recipe/252379/classic-hamburger/",
+                "foodname": "Dosa",
+                "quantity": 3
+            }
+        ],
+        [
+            {
+                "Unit_price": 70,
+                "food_image": "http://example.com/pizza.jpg",
+                "foodname": "Pizza",
+                "quantity": 1
+            }
+        ]
+    ]
+}
 
 
+```
+
+### Update the Payment   Patch http://localhost:8000/invoices/67b7e1921c0f9ece6887706a
+
+```json
+
+     {
+ 
+  "order_id": "67b7d75e1c0f9ece68877066",
+  "payment_method": "CARD",
+  "payment_status": "PAID"
+  }
+
+  ### Response 
+
+    {
+    "MatchedCount": 1,
+    "ModifiedCount": 1,
+    "UpsertedCount": 0,
+    "UpsertedID": null
+  }
+  
+```
+
+### Payment status has been updated GET http://localhost:8000/invoices/67b7e1921c0f9ece6887706a
 
 
+  ```json
+
+    {
+    "Invoice_id": "67b7e1921c0f9ece6887706a",
+    "Payment_method": "CARD",
+    "Order_id": "67b7d75e1c0f9ece68877066",
+    "Payment_status": "PAID",
+    "Payment_due": 100,
+    "Table_number": "T2",
+    "Payment_due_date": "0001-01-01T00:00:00Z",
+    "Order_details": [
+        [
+            {
+                "Unit_price": 70,
+                "food_image": "http://example.com/pizza.jpg",
+                "foodname": "Pizza",
+                "quantity": 1
+            }
+        ],
+        [
+            {
+                "Unit_price": 10,
+                "food_image": "https://www.eatingwell.com/recipe/252379/classic-hamburger/",
+                "foodname": "Dosa",
+                "quantity": 3
+            }
+        ]
+    ]
+}
+
+  ```
