@@ -1,10 +1,11 @@
 # Restaurant-Management
 Restaurant Management API (Golang, Gin, MongoDB)  This is a RESTful API for a restaurant management system built using Golang, Gin framework, and MongoDB. It includes features for managing food items, orders, order items, invoices, tables, and menus.
 
-### User Authentication (Signup & Login)
-Signup
+## Features
+
+## User Authentication (Signup & Login)
 Endpoint: POST /users/signup
-Request:
+### Request:
 
 {
   "first_name": "Vj",
@@ -13,30 +14,24 @@ Request:
   "email": "vj@gmail.com",
   "phone": "9876543210"
 }
-Response:
+### Response:
 
-json
-Copy
-Edit
+
 {
   "InsertedID": "67b7ceb740642997053061aa"
 }
-Login
-Endpoint: POST /users/login
-Request:
 
-json
-Copy
-Edit
+### Login
+Endpoint: POST /users/login
+### Request:
+
 {
   "email": "vj@gmail.com",
   "password": "123456"
 }
-Response:
+### Response:
 
-json
-Copy
-Edit
+
 {
   "ID": "67b7ceb740642997053061aa",
   "first_name": "Vj",
