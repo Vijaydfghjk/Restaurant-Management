@@ -107,19 +107,17 @@ Endpoint: POST /users/login
 ### Request for Order_items POST http://localhost:8000/OrderItems
 
 {
-  "order_items" : [
-  {
-  "quantity": 3,
-  "food_id": "67ad34a2fc209f120628890e",
-  "order_id": "67b7d75e1c0f9ece68877066"
-  },
-
-   {
-  
-  "quantity": 1,
-  "food_id": "67ab7289290928d729753d6b",
-  "order_id": "67b7d75e1c0f9ece68877066"
-   }
+  "order_items": [
+    {
+      "quantity": 3,
+      "food_id": "67ad34a2fc209f120628890e",
+      "order_id": "67b7d75e1c0f9ece68877066"
+    },
+    {
+      "quantity": 1,
+      "food_id": "67ab7289290928d729753d6b",
+      "order_id": "67b7d75e1c0f9ece68877066"
+    }
   ]
 }
 
