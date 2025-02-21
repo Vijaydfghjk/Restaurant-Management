@@ -3,6 +3,33 @@ Restaurant Management API (Golang, Gin, MongoDB)  This is a RESTful API for a re
 
 ## Features
 
+🛠 User Authentication
+- Signup & Login with secure password hashing (bcrypt).
+- JWT-based authentication for secure access.
+- Refresh token implementation for session management.
+🍽 Restaurant Management
+Food Management: Add, update, and retrieve food items.
+Menu Handling: Organize food items into different categories.
+Table Management: Assign and track restaurant tables.
+📦 Order Management
+Place orders and associate them with tables.
+Retrieve order details using order_id.
+Fetch order information, including:
+Number of food items
+Quantity of each item
+Total cost calculation
+Table number
+📊 MongoDB Aggregation for Order Insights
+Use of MongoDB aggregation functions to fetch structured order details efficiently.
+🧾 Invoice Generation
+Generate invoices based on orders and items.
+Include total bill amount with tax calculations.
+🚀 Tech Stack
+Golang with Gin Framework for building REST APIs.
+MongoDB for NoSQL database storage.
+JWT Authentication for security.
+
+
 ## User Authentication (Signup & Login)
 Endpoint: POST /users/signup
 ### Request:
