@@ -23,8 +23,6 @@ Restaurant Management API (Golang, Gin, MongoDB)  This is a RESTful API for a re
 - Total cost 
 - Efficiently fetch structured order details using MongoDB Aggregation functions.
   
-### 📊 MongoDB Aggregation for Order Insights
-- Use of MongoDB aggregation functions to fetch structured order details efficiently.
 ### 🧾 Invoice Generation
 - Generate invoices based on orders and items.
 - Include total bill amount with tax calculations.
