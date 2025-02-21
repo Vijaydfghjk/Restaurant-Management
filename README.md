@@ -37,7 +37,7 @@ Restaurant Management API (Golang, Gin, MongoDB)  This is a RESTful API for a re
 ## User Authentication (Signup & Login)
 Endpoint: POST /users/signup
 ### Request:
-
+```json
 {
   "first_name": "Vj",
   "last_name": "Raj",
@@ -45,24 +45,21 @@ Endpoint: POST /users/signup
   "email": "vj@gmail.com",
   "phone": "9876543210"
 }
+
 ### Response:
-
-
 {
   "InsertedID": "67b7ceb740642997053061aa"
 }
-
+```
 ### Login
 Endpoint: POST /users/login
 ### Request:
-
+```json
 {
   "email": "vj@gmail.com",
   "password": "123456"
 }
 ### Response:
-
-
 {
   "ID": "67b7ceb740642997053061aa",
   "first_name": "Vj",
@@ -75,7 +72,7 @@ Endpoint: POST /users/login
   "updated_at": "2025-02-21T00:54:15Z",
   "user_id": "67b7ceb740642997053061aa"
 }
-
+```
 ## Order Billing Process  POST http://localhost:8000/orders
 
   ### Request for Create table 
