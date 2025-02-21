@@ -11,14 +11,18 @@ Restaurant Management API (Golang, Gin, MongoDB)  This is a RESTful API for a re
 - **Food Management**: Add, update, and retrieve food items.
 - **Menu Handling**: Organize food items into different categories.
 - **Table Management**: Assign and track restaurant tables.
-### 📦 Order Management
-- Place orders and associate them with tables.
-- Retrieve order details using order_id.
-- Fetch order information, including:
-- Number of food items
-- Quantity of each item
-- Total cost calculation
+- **Order Management**: Create, update, and retrieve orders.
+- **Order Item Management**: Manage individual items within an order.
+
+### 🔍 Fetch Order Details Using Order ID
+- Retrieve complete order details using order_id, including:
+- Food items
 - Table number
+- Order details
+- Number of persons at the table
+- Total cost 
+- Efficiently fetch structured order details using MongoDB Aggregation functions.
+  
 ### 📊 MongoDB Aggregation for Order Insights
 - Use of MongoDB aggregation functions to fetch structured order details efficiently.
 ### 🧾 Invoice Generation
@@ -28,6 +32,8 @@ Restaurant Management API (Golang, Gin, MongoDB)  This is a RESTful API for a re
 - Golang with Gin Framework for building REST APIs.
 - MongoDB for NoSQL database storage.
 - JWT Authentication for security.
+- Docker for containerized deployment.
+- Swagger API Documentation for easy API testing and visualization.
 
 
 ## User Authentication (Signup & Login)
