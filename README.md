@@ -75,3 +75,96 @@ Endpoint: POST /users/login
   "updated_at": "2025-02-21T00:54:15Z",
   "user_id": "67b7ceb740642997053061aa"
 }
+
+## Order Billing Process  POST http://localhost:8000/orders
+
+  ### Request for Create table 
+
+   {
+  "number_of_guests": 2,
+  "table_number": "T2"
+  }
+  
+  ### Response
+  {
+    "InsertedID": "67b7dbef1c0f9ece68877069"
+  } 
+  ### Request for Create Order 
+
+   
+{
+  "order_date": "2025-02-21T00:00:00Z",
+  "table_id": "67b7dbef1c0f9ece68877069"
+}
+
+
+### Response 
+
+{
+    "InsertedID": "67b7d75e1c0f9ece68877066"
+}
+
+### Request for Order_items POST http://localhost:8000/OrderItems
+
+{
+  "order_items" : [
+  {
+  "quantity": 3,
+  "food_id": "67ad34a2fc209f120628890e",
+  "order_id": "67b7d75e1c0f9ece68877066"
+  },
+
+   {
+  
+  "quantity": 1,
+  "food_id": "67ab7289290928d729753d6b",
+  "order_id": "67b7d75e1c0f9ece68877066"
+   }
+  ]
+}
+
+### Response 
+
+   {
+    "InsertedIDs": [
+        "67b7da001c0f9ece68877067",
+        "67b7da001c0f9ece68877068"
+    ]
+}
+
+
+ ### Fetching the all Deatails GET http://localhost:8000/OrderItemsbyorder_id/67b7d75e1c0f9ece68877066
+
+ ### Response 
+
+    [
+    {
+        "OrderId": "67b7d75e1c0f9ece68877066",
+        "TableId": "67b7dbef1c0f9ece68877069",
+        "Table_number": "T2",
+        "order_items": [
+            [
+                {
+                    "Unit_price": 70,
+                    "food_image": "http://example.com/pizza.jpg",
+                    "foodname": "Pizza",
+                    "quantity": 1
+                }
+            ],
+            [
+                {
+                    "Unit_price": 10,
+                    "food_image": "https://www.eatingwell.com/recipe/252379/classic-hamburger/",
+                    "foodname": "Dosa",
+                    "quantity": 3
+                }
+            ]
+        ],
+        "payment_due": 100
+    }
+]
+
+
+
+
+
