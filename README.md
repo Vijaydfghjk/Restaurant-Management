@@ -79,7 +79,7 @@ Endpoint: POST /users/login
 ## Order Billing Process  POST http://localhost:8000/orders
 
   ### Request for Create table 
-
+```json
    {
   "number_of_guests": 2,
   "table_number": "T2"
@@ -88,10 +88,12 @@ Endpoint: POST /users/login
   ### Response
   {
     "InsertedID": "67b7dbef1c0f9ece68877069"
-  } 
+  }
+```
+
   ### Request for Create Order 
 
-   
+```json   
 {
   "order_date": "2025-02-21T00:00:00Z",
   "table_id": "67b7dbef1c0f9ece68877069"
@@ -103,7 +105,7 @@ Endpoint: POST /users/login
 {
     "InsertedID": "67b7d75e1c0f9ece68877066"
 }
-
+```
 ### Request for Order_items POST http://localhost:8000/OrderItems
 
 ```json
