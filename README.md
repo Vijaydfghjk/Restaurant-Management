@@ -73,7 +73,7 @@ Endpoint: POST /users/login
   "user_id": "67b7ceb740642997053061aa"
 }
 ```
-## Order Billing Process  POST http://localhost:8000/orders
+## Order Billing Process  POST http://localhost:8000/tables
 
   ### Request for Create table 
 ```json
@@ -88,6 +88,7 @@ Endpoint: POST /users/login
   }
 ```
 
+ ## POST http://localhost:8000/orders
   ### Request for Create Order 
 
 ```json   
