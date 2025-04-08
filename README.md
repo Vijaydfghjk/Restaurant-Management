@@ -22,6 +22,8 @@ Restaurant Management API (Golang, Gin, MongoDB)  This is a RESTful API for a re
 - Number of persons at the table
 - Total cost 
 - Efficiently fetch structured order details using MongoDB Aggregation functions.
+- Optimized order processing by using Goroutines and Channels to insert 
+multiple order items concurrently, reducing API response time and improving system performance.
   
 ### 🧾 Invoice Generation
 - Generate invoices based on orders and items.
